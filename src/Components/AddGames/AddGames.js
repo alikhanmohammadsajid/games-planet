@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './AddGames.css'
 import { useForm } from "react-hook-form";
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 const AddGames = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [imageURL, setImageURL] = useState(null)
@@ -21,7 +22,7 @@ const AddGames = () => {
             },
             body: JSON.stringify(gameData)
         })
-        .then(res =>console.log('server site response', res))
+            .then(res => console.log('server site response', res))
     };
 
     const handleImageUpload = event => {
@@ -41,22 +42,41 @@ const AddGames = () => {
 
     }
     return (
-        <div className="container">
-            <h1>its add games</h1>
-            <form className="form" onSubmit={handleSubmit(onSubmit)}>
+        <div className="row container">
 
-                <input name="name" placeholder="games" ref={register} />
-                
-                <input name="price" placeholder="price" ref={register} />
-                
-                <input name="exampleRequired" type="file" onChange={handleImageUpload} />
-                
-                <br />
+            <div className="col-md-4 container">
+                <ul className="nav">
+                    <li>
+                        <Link className="manage" to="/manageProduct">Manage Product</Link>
+                    </li>
+                    <li>
+                        <Link className="manage" to="/addGames">ADD GAMES</Link>
+                    </li>
+                    
+                    <li>
+                        <Link className="manage" >EDIT</Link>
+                    </li>
+                </ul>
 
-                {errors.exampleRequired && <span>This field is required</span>}
 
-                <input type="submit" />
-            </form>
+
+            </div>
+            <div className="col-md-4">
+                <form className="form" onSubmit={handleSubmit(onSubmit)}>
+
+                    <input name="name" placeholder="games" ref={register} />
+
+                    <input name="price" placeholder="price" ref={register} />
+
+                    <input name="exampleRequired" type="file" onChange={handleImageUpload} />
+
+                    <br />
+
+                    {errors.exampleRequired && <span>This field is required</span>}
+
+                    <input type="submit" />
+                </form>
+            </div>
 
         </div>
     );

@@ -6,7 +6,7 @@ import './Games.css'
 const Games = ({ game }) => {
     
     return (
-        <div className="col-md-4 container m-auto justify-content-evenly game">
+        <div className="col-md-4 container m-auto game">
             <img className="img" src={game.imageURL} alt=""/>
             <h5 className="game">${game.price}</h5>
             <h5 className="game">|{game.name}|</h5>

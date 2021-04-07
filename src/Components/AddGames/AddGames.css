@@ -5,3 +5,11 @@
     color: red;
     text-align: center;
 }
+.manage{
+    border: 1px solid navy;
+    border-radius: 5px;
+    background-color: darkgray;
+    color:black;
+    margin: 8px;
+    padding: 8px;
+}
