@@ -13,7 +13,7 @@ const AddGames = () => {
             price: data.price,
             imageURL: imageURL
         }
-        const url = `http://localhost:5055/addGame`
+        const url = `https://ancient-castle-57351.herokuapp.com/addGame`
         console.log(gameData)
         fetch(url, {
             method: 'POST',
