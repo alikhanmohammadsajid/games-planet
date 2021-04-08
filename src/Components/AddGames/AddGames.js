@@ -47,7 +47,7 @@ const AddGames = () => {
             <div className="col-md-4 container">
                 <ul className="nav">
                     <li>
-                        <Link className="manage" to="/manageProduct">Manage Product</Link>
+                        <Link className="manage" to="/manageGames">Manage Games</Link>
                     </li>
                     <li>
                         <Link className="manage" to="/addGames">ADD GAMES</Link>

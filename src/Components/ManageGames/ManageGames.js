@@ -1,12 +1,14 @@
 import React from 'react';
 
-const Header = () => {
+
+const ManageGames = () => {
+    
     return (
         <div>
-            <h1>its header</h1>
             
+         
         </div>
     );
 };
 
-export default Header;
+export default ManageGames;

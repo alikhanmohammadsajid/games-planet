@@ -11,6 +11,7 @@ import AddGames from './Components/AddGames/AddGames';
 import Purchase from './Components/Purchase/Purchase';
 import Login from './Components/Login/Login';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import ManageGames from './Components/ManageGames/ManageGames';
 
 export const UserContext = createContext();
 function App() {
@@ -34,7 +35,7 @@ function App() {
                 <Link to="/addGames">Add Games</Link>
               </li>
               <li>
-                <Link to="/purchase/:id">Purchase</Link>
+                <Link to="/purchase/:name">Purchase</Link>
               </li>
               <li>
                 <Link to="/admin">Admin</Link>
@@ -60,10 +61,12 @@ function App() {
             <AddGames />
           </PrivateRoute>
           
-          <PrivateRoute path="/purchase">
+          <PrivateRoute path="/purchase/:name">
             <Purchase />
           </PrivateRoute>
-          
+          <Route path="/manageGames">
+            <ManageGames></ManageGames>
+          </Route>
         </Switch>
 
       </Router>

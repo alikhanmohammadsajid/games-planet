@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 import Games from '../Games/Games';
+import ManageGames from '../ManageGames/ManageGames';
 
 const Home = () => {
     
@@ -13,11 +15,17 @@ const Home = () => {
 
     return (
         <div className="row ">
-            
+            {
+                games.length === 0 && <Spinner className="container" animation="border" role="status">
+                <span className="sr-only">Loading...</span>
+              </Spinner>
+            }
             {
                 games.map(game =><Games game={game}></Games>)
             }
-            
+            {
+                games.map(game =><ManageGames game={game}></ManageGames>)
+            }
             
             
         </div>
