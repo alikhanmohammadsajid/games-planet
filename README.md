@@ -6,5 +6,5 @@ Admin,
 Log In
 and they have own link.
 I also create PrivateRoute.I also create google authentication for log in.
-in this website also have AddGames component where you can add any games.
+in this website also have AddGames component where you can add any games.if you click any games there will have its information
 client deploy site : https://games-planet-pro.web.app/
